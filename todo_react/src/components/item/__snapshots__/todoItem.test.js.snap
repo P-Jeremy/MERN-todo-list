@@ -1,3 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input it renders correctly 1`] = `ShallowWrapper {}`;
+exports[`Input it matches snapshot 1`] = `
+<div
+  className="card col-md-3 m-2"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="dataContainer"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className=""
+      >
+        test
+      </span>
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+        type="button "
+      >
+        X
+      </button>
+    </div>
+  </div>
+</div>
+`;

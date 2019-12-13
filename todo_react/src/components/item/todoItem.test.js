@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import TodoItem from './todoItem';
@@ -29,8 +30,19 @@ beforeEach(() => {
 
 describe('Input', () => {
 
-  test('it renders correctly', () => {
-    expect(item).toMatchSnapshot();
+  it('Should exist', () => {
+    expect(item).toBeDefined();
+    expect(item.exists()).toBe(true);
+  });
+
+  test('it matches snapshot', () => {
+    const itemSnap = renderer.create(<TodoItem
+      key={todo._id}
+      data={todo}
+      todoRemove={todoRemove}
+      todoUpdate={todoUpdate}
+    />).toJSON();
+    expect(itemSnap).toMatchSnapshot();
   });
 
   it('Should call todoRemove() on btn click', () => {
@@ -45,5 +57,11 @@ describe('Input', () => {
     const todoUpdate = item.instance().props.todoUpdate;
     box.simulate('change');
     expect(todoUpdate).toHaveBeenCalled();
+  });
+
+  it('Should empty span className on box unchecked', () => {
+    const span = item.find('span')
+    item.instance().state.checked = false
+    expect(span.hasClass('done')).toEqual(false);
   });
 })

@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input it renders correctly 1`] = `ShallowWrapper {}`;
-
-exports[`Input renders correctly it renders correctly 1`] = `ShallowWrapper {}`;
+exports[`Input it matches snapshot 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        htmlFor="todoInput"
+      >
+        <span>
+          Ajouter une tâche
+        </span>
+        <input
+          className="form-control"
+          id="todoInput"
+          name="input"
+          onChange={[Function]}
+          placeholder="Tâche"
+          type="text"
+          value=""
+        />
+        <button
+          className="btn btn-primary mt-2"
+          id="submit"
+          type="submit"
+        >
+          Ajouter
+        </button>
+      </label>
+    </div>
+  </form>
+</div>
+`;
