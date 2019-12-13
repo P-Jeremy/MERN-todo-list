@@ -1,17 +1,20 @@
-Available Scripts
+## Available Scripts
+
 In the project directory, you can run:
 
-npm run dev
+### `npm run rev`
 
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser
-The page will reload if you make edits.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-npm run client
+### `npm run client`
 
 Runs client on development mode.
 
-npm run server
+### `npm run server`
 
 Runs server on development mode.
+
