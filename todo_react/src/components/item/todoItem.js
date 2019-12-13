@@ -2,36 +2,35 @@
 import React, { Component } from 'react'
 import './todoItem.scss'
 
-
 export class TodoItem extends Component {
-
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
-      checked: false,
+      checked: false
     }
     this.handleDelete = this.handleDelete.bind(this)
     this.handleChange = this.handleChange.bind(this)
-
   }
 
-  componentDidMount() {
-    const { data } = this.props;
+  componentDidMount () {
+    const { data } = this.props
     this.setState({ checked: data.done })
   }
-  handleDelete(id) {
+
+  handleDelete (id) {
     this.props.todoRemove(id)
   }
 
-  handleChange(id) {
+  handleChange (id) {
     const { checked } = this.state
     this.props.todoUpdate(id)
     this.setState({ checked: !checked })
   }
-  render() {
+
+  render () {
     const { data } = this.props
     const { checked } = this.state
-    const { handleDelete, handleChange } = this;
+    const { handleDelete, handleChange } = this
 
     return (
       <div className="card col-md-3 m-2">

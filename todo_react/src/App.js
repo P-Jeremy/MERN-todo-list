@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import TodoMain from './components/main/todoMain'
 import store from './store/store'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <main>

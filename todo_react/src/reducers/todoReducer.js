@@ -1,6 +1,6 @@
 import { TODO_GET, TODO_ADD, TODO_UPDATE, TODO_REMOVE } from '../actions/todoActions'
 
-export default function todoReducer(state = [], action) {
+export default function todoReducer (state = [], action) {
   switch (action.type) {
     case TODO_ADD: {
       return state

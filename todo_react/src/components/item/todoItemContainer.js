@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import { todoRemove, todoUpdate } from '../../actions/todoActions'
 import TodoItem from './todoItem'
 
-
 const mapDispatchToProps = (dispatch) => ({
   todoRemove: (id) => {
     dispatch(todoRemove(id))

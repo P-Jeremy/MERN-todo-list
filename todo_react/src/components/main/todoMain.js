@@ -4,7 +4,7 @@ import TodoInputContainer from '../input/todoInputContainer'
 import ListContainer from '../list/ListContainer'
 
 export class TodoMain extends Component {
-  render() {
+  render () {
     return (
       <div>
         <section>

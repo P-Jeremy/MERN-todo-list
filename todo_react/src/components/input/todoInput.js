@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
 export class TodoInput extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       input: ''
@@ -11,18 +11,18 @@ export class TodoInput extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(e) {
+  handleSubmit (e) {
     e.preventDefault()
     const { input } = this.state
     this.setState({ input: '' })
     this.props.todoAdd(input)
   }
 
-  handleChange(e) {
+  handleChange (e) {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  render() {
+  render () {
     const { handleSubmit, handleChange } = this
     const { input } = this.state
     return (
