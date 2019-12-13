@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "client": "npm start --prefix todo_react",
+    "test:client": "npm test --prefix todo_react",
     "server": "set NODE_ENV=production && nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"

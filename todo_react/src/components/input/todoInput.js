@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
 export class TodoInput extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       input: ''
@@ -11,18 +11,18 @@ export class TodoInput extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit (e) {
+  handleSubmit(e) {
     e.preventDefault()
     const { input } = this.state
     this.setState({ input: '' })
     this.props.todoAdd(input)
   }
 
-  handleChange (e) {
+  handleChange(e) {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  render () {
+  render() {
     const { handleSubmit, handleChange } = this
     const { input } = this.state
     return (
@@ -32,7 +32,7 @@ export class TodoInput extends Component {
         >
           <div className="form-group">
             <label htmlFor="todoInput">
-              <span>Ajouter une tache</span>
+              <span>Ajouter une tâche</span>
               <input
                 className="form-control"
                 id="todoInput"
@@ -42,7 +42,7 @@ export class TodoInput extends Component {
                 type="text"
                 value={input}
               />
-              <button className="btn btn-primary mt-2" type="submit">Ajouter</button>
+              <button id="submit" className="btn btn-primary mt-2" type="submit">Ajouter</button>
             </label>
           </div>
         </form>
