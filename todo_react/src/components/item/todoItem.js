@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
+import './todoItem.scss'
+
 
 export class TodoItem extends Component {
 
@@ -34,9 +36,11 @@ export class TodoItem extends Component {
     return (
       <div className="card col-md-3 m-2">
         <div className="card-body">
-          <input onChange={() => handleChange(data._id)} type="checkbox" checked={checked} />
-          <span className="title">{data.title}</span>
-          <button type="button" onClick={() => handleDelete(data._id)}>Supprimer</button>
+          <div className="dataContainer">
+            <input onChange={() => handleChange(data._id)} type="checkbox" checked={checked} />
+            <span className={checked ? 'done' : ''}>{data.title}</span>
+            <button className="btn btn-danger" type="button " onClick={() => handleDelete(data._id)}>X</button>
+          </div>
         </div>
       </div>
     )

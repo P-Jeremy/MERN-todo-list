@@ -1,0 +1,12 @@
+.dataContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly ;
+  .done{
+    text-decoration: line-through;
+  }
+  span {
+    margin: 0 1rem 0 1rem;
+  }
+}
