@@ -18,9 +18,10 @@ mongoose
   .then(() => {
     console.log('Connected to DB!')
   })
-  .catch(() => {
-    console.log(' Unable to connect to DB...')
+  .catch((e) => {
+    console.log(' Unable to connect to DB...', e)
   })
+
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -34,3 +35,5 @@ app.set('port', port)
 app.set('socketIo', io)
 
 server.listen(8080, () => console.log('PORT', port))
+
+module.exports = server 

@@ -8,7 +8,7 @@
     "test:client": "npm test --prefix todo_react",
     "server": "set NODE_ENV=production && nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "MONGO_CONFIG_URL='mongodb://root:rootpassword@localhost:27017' mocha --recursive"
   },
   "keywords": [],
   "author": "",
@@ -23,12 +23,16 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
     "concurrently": "^5.0.1",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.2"
   }
 }
